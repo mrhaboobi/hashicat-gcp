@@ -1,8 +1,9 @@
 module "network" {
-  source  = "app.terraform.io/Hashi-Corp-Training/network/google"
+  source  = "https://github.com/mrhaboobi/terraform-google-network"
   version = "3.4.0"
   network_name = "GauravLand"
   project_id = var.project
+  
   subnets = [
         {
             subnet_name   = "gaurav-subnet"
@@ -10,5 +11,6 @@ module "network" {
             subnet_region = var.region
         }
     ]
+
 }
 
